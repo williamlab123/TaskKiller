@@ -66,7 +66,7 @@ Main();
     {
         Console.ForegroundColor = ConsoleColor.DarkBlue;
         System.Console.WriteLine("Note: In some process you may need to add '.exe'. This is a example list os process that you can kill:");
-        System.Console.WriteLine("To know the name of the process, open the Task Menager and search for the 'process name', or search it online.");
+        System.Console.WriteLine("To know the name of the process, open the Task Manager and search for the 'process name', or search it online.");
         System.Console.WriteLine();
         string[] list = 
         {
