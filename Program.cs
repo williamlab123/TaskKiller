@@ -9,7 +9,7 @@ Main();
         
        System.Console.WriteLine("Type h to example");
 
-
+  //Try to close the process or service that have been specified. 
         try
          {
             System.Console.WriteLine("Type the name of the process or service to be closed");
@@ -34,8 +34,10 @@ Main();
          
             if (processes.Length > 0) 
             {
+                 //Foreach to serach all the process with the name we want
                 foreach (var process in processes)
                  {
+                     //Note - the function Kill() kills the process without asking, if you want to be more friendly, you can use Close()
                     process.Kill();
                  }
                   Console.ForegroundColor = ConsoleColor.Green;
@@ -46,12 +48,14 @@ Main();
             
             else 
             {
+                 
                 Process.Start("taskkill", "/F /IM " + processName);
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"The process {processName} have been successfully killed.");
                 Console.ResetColor();
             }
 
+             //If the process could not be killed or found
         
         } catch (Exception e)
          {
